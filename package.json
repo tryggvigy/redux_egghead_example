@@ -1,0 +1,39 @@
+{
+  "name": "prep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha $(find src -name '*-test.js') --compilers js:babel-core/register",
+    "test-old": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive",
+    "test-old:watch": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive --watch",
+    "test-old:cov": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --recursive"
+  },
+  "author": "Tryggvi <tryggvigy@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "deep-freeze": "0.0.1",
+    "eslint-config-brigade": "^1.10.0",
+    "eslint-plugin-react": "^3.11.3",
+    "expect": "^1.13.4",
+    "isparta": "^4.0.0",
+    "mocha": "^2.3.4",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.1",
+    "redux": "^3.0.5"
+  }
+}
