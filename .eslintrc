@@ -1,34 +1,45 @@
-{
-  "extends": "eslint-config-brigade/react",
+{ "extends": "eslint-config-airbnb",
   "env": {
     "browser": true,
-    "mocha": true,
-    "node": true
-  },
-  "globals": {
-    "deepFreeze": true,
-    "expect": true
+    "node": true,
+    "mocha": true
   },
   "ecmaFeatures": {
-    "modules": true,
     "experimentalObjectRestSpread": true
   },
   "rules": {
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
     "react/no-multi-comp": 0,
-    "react/prop-types": 0,
-    // Temporarily disabled due to babel-eslint issues:
-    "react/jsx-pascal-case": 0,
-    "react/react-in-jsx-scope": 2,
-    "no-use-before-define": 0,
-    "no-console": 0,
-    "no-shadow": 0,
-    // Temporarily disabled due to babel-eslint issues:
+    "import/default": 0,
+    "import/no-duplicates": 0,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0, //
+    // Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
     "block-scoped-var": 0,
+    // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
     "padded-blocks": 0,
+    "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-alert": 0
   },
   "plugins": [
-    "react"
-  ]
+    "react", "import"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      moduleDirectory: ["node_modules", "src"]
+    }
+  },
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DISABLE_SSR__": true,
+    "__DEVTOOLS__": true,
+    "socket": true,
+    "webpackIsomorphicTools": true
+  }
 }

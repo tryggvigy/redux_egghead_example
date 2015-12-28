@@ -4,7 +4,7 @@ const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
     id: nextTodoId++,
-    text: text
+    text
   };
 };
 

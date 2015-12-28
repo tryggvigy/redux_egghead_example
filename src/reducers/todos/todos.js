@@ -1,6 +1,6 @@
-import todo from './todo';
+import todo from './todo.js';
 
-const todos = (state = [], action) => {
+const todos_ = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -13,5 +13,7 @@ const todos = (state = [], action) => {
       return state;
   }
 };
+
+const todos = todos_;
 
 export default todos;
