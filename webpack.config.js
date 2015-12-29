@@ -1,13 +1,14 @@
-var webpack = require("webpack");
-var path = require("path");
+var webpack = require('webpack');
+var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: ['./src/entry.js'],
+    entry: ['./src/redux/entry.js'],
     devtool: 'source-map',
     output: {
-        path: path.join(__dirname, "./build/"),
-        filename: "bundle.js",
-        publicPath: "/build"
+        path: path.join(__dirname, './build/'),
+        filename: 'bundle.js',
+        publicPath: '/build'
     },
     devServer: {
       inline: true,
@@ -15,15 +16,21 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            { 
+              test: /\.scss$/, 
+              loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+            },
             {
               test: /\.js$/,
               exclude: /node_modules/,
-              loader: 'babel',
-              query: {
-                presets: ['es2015', 'react']
-              }
+              loader: 'babel'
             }
         ]
     }
 };
+
+module.exports.plugins = [
+  new ExtractTextPlugin('app.css', {
+    allChunks: true
+  })
+];

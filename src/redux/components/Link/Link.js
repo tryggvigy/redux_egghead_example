@@ -1,5 +1,5 @@
 import React from 'react';
-
+require('./Link.scss');
 
 const Link = ({
   active,
@@ -11,7 +11,8 @@ const Link = ({
   }
 
   return (
-    <a href='#'
+    <a href="#"
+      className="Link"
       onClick={e => {
         e.preventDefault();
         onClick();
