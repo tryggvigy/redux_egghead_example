@@ -1,5 +1,5 @@
 @import 'common/_colors.scss';
 
-body {
-  background: $primary-color;
-}
+* { box-sizing: border-box; }
+html { font-size: 10px; }
+body { font-size: 1.4rem; background-color: $primary-color; margin: 0;}
