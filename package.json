@@ -4,6 +4,7 @@
   "description": "",
   "main": "bundle.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "./node_modules/mocha/bin/mocha $(find src -name '*-test.js') --compilers js:babel-core/register",
     "test-old": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive",
     "test-old:watch": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive --watch",

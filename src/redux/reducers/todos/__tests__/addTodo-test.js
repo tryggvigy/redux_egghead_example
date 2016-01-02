@@ -5,7 +5,7 @@ import expect from 'expect';
 import deepFreeze from 'deep-freeze';
 
 
-describe('addTodo action', () => {
+describe('addTodo action on todos reducer', () => {
   it('should add a new todo', () => {
     const stateBefore = [];
     const stateAfter = [

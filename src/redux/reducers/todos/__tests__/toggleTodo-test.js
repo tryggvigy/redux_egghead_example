@@ -4,7 +4,7 @@ import todos from '../todos';
 import expect from 'expect';
 import deepFreeze from 'deep-freeze';
 
-describe('toggleTodo action', () => {
+describe('toggleTodo action on todos reducer', () => {
   it('should toggle a todo with specified id', () => {
     const stateBefore = [
       {

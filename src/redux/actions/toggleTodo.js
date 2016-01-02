@@ -1,6 +1,8 @@
+import { TOGGLE_TODO } from './';
+
 const toggleTodo = (id) => {
   return {
-    type: 'TOGGLE_TODO',
+    type: TOGGLE_TODO,
     id
   };
 };
