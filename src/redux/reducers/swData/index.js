@@ -8,7 +8,6 @@ const swData = (
 ) => {
   switch (action.type) {
     case 'LOAD_DATA_SUCCESS':
-      console.info('LOAD_DATA_SUCCESS');
       return {
         ...state,
         count: action.data.count,
@@ -16,7 +15,7 @@ const swData = (
         results: action.data.results
       };
     case 'LOAD_DATA_FAILURE':
-      break;
+      return new Error(action.err);
     default:
       return state;
   }

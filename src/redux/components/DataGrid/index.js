@@ -14,7 +14,11 @@ class DataGrid extends Component {
         <div className="DataGrid__holder">
           {data.results.map((characer, index) => {
             return (
-              <div key={index}>{characer.name}</div>
+              <div className="item" key={index}>
+                <div className="item__inner">
+                  {characer.name}
+                </div>
+              </div>
             );
           })}
         </div>

@@ -1,5 +1,9 @@
 import React from 'react';
-require('./Header.scss');
+// hack to get mocha to run correctly,
+// check for the presence of the it() function.
+if (typeof global.it !== 'function') {
+  require('./Header.scss');
+}
 const Header = () => {
   return (
     <header className="Header">
@@ -9,7 +13,7 @@ const Header = () => {
         <a className="Header__nav__link" href="#">Anything</a>
       </nav>
       <h1 className="Header__title"> Zombocom </h1>
-      <div className=""></div>
+      <div></div>
     </header>
   );
 };

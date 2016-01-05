@@ -1,5 +1,6 @@
+@import "../../../styles/common/_colors.scss";
+
 .DataGrid {
-  display: flex;
   padding: 20px;
 }
 .DataGrid__activate {
@@ -9,4 +10,21 @@
   background-color: rgb(193, 153, 82);
   border-radius: 5%;
   margin: 0  auto;
+}
+.DataGrid__holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.DataGrid .item {
+  margin: 20px;
+  min-height: 16vw;
+  background-color: $primary-color--light;
+  flex: 0 0 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DataGrid .item__inner {
+
 }
