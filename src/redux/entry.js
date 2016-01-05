@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-// redux devtools middleware
 import configureStore from './helpers/configureStore';
+import rootReducer from './reducers';
 
-import todoApp from './reducers/todoApp';
-import TodoApp from './components/TodoApp/TodoApp';
-
-
+import App from './components/App/';
 require('../styles/common.scss');
 
 ReactDOM.render(
-  <Provider store={configureStore(todoApp)}>
-    <TodoApp />
+  <Provider store={configureStore(rootReducer)}>
+    <App />
   </Provider>,
   document.getElementById('root')
 );

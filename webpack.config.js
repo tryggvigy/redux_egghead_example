@@ -16,19 +16,9 @@ module.exports = {
     },
     module: {
         loaders: [
-            {
-              test: /\.scss$/,
-              loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
-            },
-            {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: 'babel'
-            },
-            {
-                test: /\.(otf|eot|svg|ttf|woff|jpg)/,
-                loader: 'url-loader?limit=8192'
-            }
+            {test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')},
+            {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
+            {test: /\.(otf|eot|svg|ttf|woff|jpg)/, loader: 'url-loader?limit=8192'}
         ]
     }
 };

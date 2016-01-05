@@ -1,1 +1,5 @@
-$primary-color: #303F9F;
+$primary-color: #182030;
+$primary-color--light: lighten($primary-color, 5%);
+$primary-color--dark: darken($primary-color, 5%);
+
+$accent-color: salmon;
