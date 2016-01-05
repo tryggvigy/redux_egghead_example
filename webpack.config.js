@@ -26,7 +26,7 @@ module.exports = {
               loader: 'babel'
             },
             {
-                test: /\.(otf|eot|svg|ttf|woff|jpg)/,
+                test: /\.(otf|eot|svg|ttf|woff|jpg|png)/,
                 loader: 'url-loader?limit=8192'
             }
         ]
