@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
-import swData from './swData/';
-
+import metadata from './metadata';
 const rootReducer = combineReducers({
-  swData
+  metadata
 });
 
 export default rootReducer;
