@@ -38,10 +38,12 @@
     "webpack": "^1.12.9"
   },
   "dependencies": {
+    "dev": "^0.1.3",
     "file-loader": "^0.8.5",
     "isomorphic-fetch": "^2.2.0",
     "jquery": "^2.1.4",
     "react": "^0.14.3",
+    "react-addons-test-utils": "^0.14.6",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.1",
     "redux": "^3.0.5",
