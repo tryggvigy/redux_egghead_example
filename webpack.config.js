@@ -18,7 +18,7 @@ module.exports = {
         loaders: [
             {test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')},
             {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-            {test: /\.(otf|eot|svg|ttf|woff|jpg)/, loader: 'url-loader?limit=8192'}
+            {test: /\.(otf|eot|svg|ttf|woff|jpg|png)/, loader: 'url-loader?limit=8192'}
         ]
     }
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 
-export function Main({
+export default function Header({
   name
 }) {
   return (
-    <div className="Header">
-      <h1>{name}</h1>
-    </div>
+    <header className="Header">
+      <h1 className="Header__title">{name}</h1>
+    </header>
   );
 }

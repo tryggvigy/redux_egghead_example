@@ -4,15 +4,10 @@ import TestUtils from 'react-addons-test-utils';
 import Header from '../';
 
 function setup() {
-
-  const props = {
-    // name: expect.createSpy()
-  };
-
+  const props = {};
   const renderer = TestUtils.createRenderer();
   renderer.render(<Header {...props} />);
   const output = renderer.getRenderOutput();
-
   return {
     props,
     output,
@@ -20,7 +15,7 @@ function setup() {
   };
 }
 
-describe('components', () => {
+describe('component', () => {
   describe('Header', () => {
     it('should render correctly', () => {
       const { output } = setup();
@@ -31,8 +26,7 @@ describe('components', () => {
       const [h1] = output.props.children;
 
       expect(h1.type).toBe('h1');
-      // expect(h1.props.children).toBe('todos')
+      expect(h1.props.className).toBe('Header__title');
     });
-
   });
 });
